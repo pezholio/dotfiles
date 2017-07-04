@@ -1,0 +1,3 @@
+[submodule "gitprompt"]
+	path = gitprompt
+	url = https://github.com/pikesley/gitprompt.git
