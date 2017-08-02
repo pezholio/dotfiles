@@ -1,0 +1,37 @@
+# This needs to be symlinked to ~/.irbc in the home directory
+
+# SAVE HISTORY DAMMIT (I can't believe this isn't the default option)
+require 'irb/ext/save-history'
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
+
+# Autocomplete
+require 'irb/completion'
+
+# Indent code blocks
+IRB.conf[:AUTO_INDENT]=true
+
+# Use awesome_print as the default formatter.
+begin
+  require 'awesome_print'
+  AwesomePrint.irb!
+rescue LoadError
+  puts 'awesome_print unavailable :('
+end
+
+# Get local methods of an object
+class Object
+  def local_methods(obj = self)
+    (obj.methods - obj.class.superclass.instance_methods).sort
+  end
+
+  # http://github.com/rtomayko/dotfiles/blob/rtomayko/.irbrc
+  def ls(obj=self)
+    width = `stty size 2>/dev/null`.split(/\s+/, 2).last.to_i
+    width = 80 if width == 0
+    local_methods(obj).each_slice(3) do |meths|
+      pattern = "%-#{width / 3}s" * meths.length
+      puts pattern % meths
+    end
+  end
+end
