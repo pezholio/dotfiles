@@ -10,5 +10,6 @@ fi
 # Some useful aliases
 alias a="atom ."
 alias t="gittower ."
+alias c="code ."
 # @pikesley's fancy gitprompt
 . ~/.dotfiles/gitprompt/gitprompt
