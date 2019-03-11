@@ -3,6 +3,8 @@
 . ~/.dotfiles/ruby/rbenv.bash
 # Add QT to path
 . ~/.dotfiles/qt/qt.bash
+# Add secrets
+. ~/.dotfiles/secrets.bash
 # Bash Completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
