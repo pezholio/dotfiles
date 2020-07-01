@@ -1,6 +1,7 @@
 brew 'docker'
 brew 'git'
 brew 'rbenv'
+brew 'ruby-build'
 brew 'nodenv'
 brew 'pyenv'
 brew 'goenv'
