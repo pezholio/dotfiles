@@ -1,0 +1,10 @@
+brew 'docker'
+brew 'git'
+brew 'rbenv'
+brew 'nodenv'
+brew 'pyenv'
+brew 'goenv'
+
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'tower'
