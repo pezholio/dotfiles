@@ -1,4 +1,5 @@
 #!/bin/bash
 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ln -s -f "$HOME/.dotfiles/ruby/irbrc" ~/.irbrc
 ln -s -f "$HOME/.dotfiles/ruby/default-gems"  ~/.rbenv/default-gems
