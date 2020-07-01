@@ -1,3 +1,5 @@
+![CI](https://github.com/pezholio/dotfiles/workflows/CI/badge.svg)
+
 # My Dotfiles
 
 It's about time I started doing this properly
