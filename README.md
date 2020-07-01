@@ -13,16 +13,8 @@ the repo in your home directory like so:
 git clone https://github.com/pezholio/dotfiles.git ~/.dotfiles
 ```
 
-Running the setup script:
+And then run the setup script to install the dependencies and set everything up:
 
 ```bash
 script/bootstrap
 ```
-
-And then adding the following to your `.zshrc`
-
-```bash
-. ~/.dotfiles/.bash_profile
-```
-
-This will probably evolve as time goes on though.
