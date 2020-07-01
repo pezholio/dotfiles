@@ -9,5 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/in
 echo "Installing Homebrew dependencies from Brewfile..."
 brew bundle
 
+RBENV_DEBUG=1 rbenv --version
+
 ln -s -f "$HOME/.dotfiles/ruby/irbrc" ~/.irbrc
-ln -s -f "$HOME/.dotfiles/ruby/default-gems"  ~/.rbenv/default-gems
+ln -s -f "$HOME/.dotfiles/ruby/default-gems" "$(rbenv root)/default-gems"
