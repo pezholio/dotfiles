@@ -7,8 +7,9 @@
 # Ruby and rbenv stuff
 . "$HOME/.dotfiles/ruby/aliases.sh"
 . "$HOME/.dotfiles/ruby/rbenv.sh"
-# Pyenv Stuff
+# Python Stuff
 . "$HOME/.dotfiles/python/pyenv.sh"
+. "$HOME/.dotfiles/python/poetry.sh"
 # Nodenv Stuff
 . "$HOME/.dotfiles/node/nodenv.sh"
 # Goenv Stuff
