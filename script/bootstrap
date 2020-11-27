@@ -16,4 +16,4 @@ git clone https://github.com/rbenv/rbenv-default-gems.git "$(rbenv root)/plugins
 ln -s -f "$HOME/.dotfiles/ruby/irbrc" ~/.irbrc
 ln -s -f "$HOME/.dotfiles/ruby/default-gems" "$(rbenv root)/default-gems"
 
-echo "source $HOME/.dotfiles/.zshrc" >> .zshrc
+echo "source $HOME/.zshrc" >> .zshrc
