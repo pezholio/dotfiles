@@ -11,6 +11,7 @@ brew 'yq'
 brew 'postgres'
 brew 'redis'
 brew 'pyenv-virtualenv'
+brew 'get_iplayer'
 
 cask 'iterm2'
 cask 'visual-studio-code'
