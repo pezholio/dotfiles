@@ -7,7 +7,7 @@ echo "Installing Homebrew..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "Installing Homebrew dependencies from Brewfile..."
-brew bundle
+brew bundle install --verbose --no-lock
 
 echo "Installing Rbenv default gems..."
 mkdir -p "$(rbenv root)/plugins"
