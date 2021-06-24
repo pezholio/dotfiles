@@ -15,6 +15,7 @@ brew 'redis'
 brew 'pyenv-virtualenv'
 brew 'get_iplayer'
 brew 'cf-cli@7'
+brew 'shellcheck'
 
 cask 'iterm2'
 cask 'visual-studio-code'
