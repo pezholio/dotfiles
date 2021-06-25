@@ -1,4 +1,5 @@
 tap 'cloudfoundry/tap'
+tap 'heroku/brew'
 
 brew 'docker'
 brew 'git'
@@ -16,6 +17,7 @@ brew 'pyenv-virtualenv'
 brew 'get_iplayer'
 brew 'cf-cli@7'
 brew 'shellcheck'
+brew 'heroku'
 
 cask 'iterm2'
 cask 'visual-studio-code'
