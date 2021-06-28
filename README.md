@@ -16,5 +16,5 @@ git clone https://github.com/pezholio/dotfiles.git ~/.dotfiles
 And then run the setup script to install the dependencies and set everything up:
 
 ```bash
-script/bootstrap
+sudo script/bootstrap
 ```
