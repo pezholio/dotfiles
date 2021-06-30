@@ -18,6 +18,7 @@ brew 'get_iplayer'
 brew 'cf-cli@7'
 brew 'shellcheck'
 brew 'heroku'
+brew 'adr-tools'
 
 cask 'iterm2'
 cask 'visual-studio-code'
