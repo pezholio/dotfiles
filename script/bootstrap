@@ -16,4 +16,8 @@ git clone https://github.com/rbenv/rbenv-default-gems.git "$(rbenv root)/plugins
 ln -s -f "$HOME/.dotfiles/ruby/irbrc" ~/.irbrc
 ln -s -f "$HOME/.dotfiles/ruby/default-gems" "$(rbenv root)/default-gems"
 
+echo "Hiding desktop icons..."
+defaults write com.apple.finder CreateDesktop false
+killall Finder
+
 echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"
