@@ -20,4 +20,7 @@ echo "Hiding desktop icons..."
 defaults write com.apple.finder CreateDesktop false
 killall Finder
 
+echo "Setting keymappings..."
+ln -s -f "$HOME/.dotfiles/karabiner" "$HOME/.config"
+
 echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"
