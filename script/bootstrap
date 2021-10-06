@@ -23,4 +23,8 @@ killall Finder
 echo "Setting keymappings..."
 ln -s -f "$HOME/.dotfiles/karabiner" "$HOME/.config"
 
+echo "Installing Dalmatian tooks"
+git clone git@github.com:dxw/dalmatian-tools.git "$HOME/Documents/dalmatian-tools"
+(cd "$HOME/Documents/dalmatian-tools" || exit; brew bundle install)
+
 echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"

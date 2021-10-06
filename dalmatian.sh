@@ -1,3 +1,4 @@
 #!/bin/bash
 
-export PATH="$PATH:$HOME/.dotfiles/dalmatian-tools/bin"
+dalmatian_tools_path="$HOME/Documents/dalmatian-tools"
+export PATH="$PATH:$dalmatian_tools_path/bin"
