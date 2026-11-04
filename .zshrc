@@ -22,7 +22,3 @@
 . "$HOME/.dotfiles/secrets.sh"
 # Some useful aliases
 . "$HOME/.dotfiles/aliases.sh"
-
-# Dalmatian CLI
-. "$HOME/.dotfiles/dalmatian.sh"
-
