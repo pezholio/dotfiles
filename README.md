@@ -15,6 +15,7 @@ Includes configuration for:
 - Go (via goenv)
 - Various command-line tools and utilities
 - A gitprompt theme for a better git experience in the terminal
+- [Ghostty](https://ghostty.org) configuration, symlinked to `~/.config/ghostty`
 
 It also contains my Karabiner configuration for remapping keys on macOS (hello media keys and custom shortcuts!), as 
 well as a setting the wallpaper programmatically on macOS (via [desktoppr](https://github.com/scriptingosx/desktoppr)).
