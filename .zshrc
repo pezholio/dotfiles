@@ -22,3 +22,5 @@
 . "$HOME/.dotfiles/secrets.sh"
 # Some useful aliases
 . "$HOME/.dotfiles/aliases.sh"
+# Sdkman initialization stuff (Java, Groovy, Scala, Kotlin, etc)
+. "$HOME/.dotfiles/sdkman/sdkman.sh"
