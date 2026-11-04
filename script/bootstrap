@@ -11,7 +11,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 echo "Installing Homebrew dependencies from Brewfile..."
-brew bundle install --verbose --no-lock
+brew bundle install --verbose
 
 echo "Hiding desktop icons..."
 defaults write com.apple.finder CreateDesktop false
