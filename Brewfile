@@ -84,7 +84,7 @@ brew "wimlib"
 brew "yarn"
 brew "yq"
 
-brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli"
+brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli", trusted: true
 
 cask "1password"
 cask "audacity"
