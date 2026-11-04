@@ -19,8 +19,12 @@ defaults write com.apple.finder CreateDesktop false
 killall Finder
 
 echo "Setting desktop images..."
-desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
-desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
+echo "Setting desktop images..."
+if desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"; then
+  desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
+else
+  desktoppr 0 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
+fi
 
 echo "Setting keymappings..."
 mkdir -p "$HOME/.config"
