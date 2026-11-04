@@ -19,6 +19,7 @@ desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
 desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
 
 echo "Setting keymappings..."
-ln -s -f "$HOME/.dotfiles/karabiner" "$HOME/.config"
+mkdir -p "$HOME/.config"
+ln -sfn "$HOME/.dotfiles/karabiner" "$HOME/.config/karabiner"
 
 echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"
