@@ -22,4 +22,6 @@ echo "Setting keymappings..."
 mkdir -p "$HOME/.config"
 ln -sfn "$HOME/.dotfiles/karabiner" "$HOME/.config/karabiner"
 
-echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"
+zshrc_source="source "$HOME/.dotfiles/.zshrc""
+grep -Fqx "$zshrc_source" "$HOME/.zshrc" ||
+  printf '%s\n' "$zshrc_source" >> "$HOME/.zshrc"
