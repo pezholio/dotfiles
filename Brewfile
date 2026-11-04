@@ -56,7 +56,6 @@ brew "libfido2"
 brew "libssh2"
 brew "libxmlsec1"
 brew "meson"
-brew "mysql", restart_service: true
 brew "nghttp2"
 brew "node"
 brew "node-build"
