@@ -1,17 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "Installing ohmyzsh.."
-/bin/bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [[ -z "${ZSH+x}" ]]; then
+  echo "Installing ohmyzsh.."
+  curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
 
-echo "Installing Homebrew..."
 if ! command -v brew >/dev/null 2>&1; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "Installing Homebrew dependencies from Brewfile..."
-brew bundle install --verbose
+brew bundle install --verbose --quiet
 
 echo "Hiding desktop icons..."
 defaults write com.apple.finder CreateDesktop false
