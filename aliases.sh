@@ -6,15 +6,19 @@ alias c="code ."
 
 function brew() {
   local action="${1-}"
+  local dotfiles_dir="$HOME/.dotfiles"
 
   command brew "$@" || return $?
 
   case "$action" in
     install|uninstall)
-      command brew bundle dump --force || return $?
-      git add Brewfile &&
-        git commit -m "Update Brewfile after brew $action $*" &&
-        git push
+      (
+        cd "$dotfiles_dir" &&
+          command brew bundle dump --force &&
+          git add Brewfile &&
+          git commit -m "Update Brewfile after brew $action $*" &&
+          git push
+      )
       ;;
   esac
 }
