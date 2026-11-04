@@ -84,8 +84,6 @@ brew "wimlib"
 brew "yarn"
 brew "yq"
 
-brew "cloudfoundry/tap/cf-cli@7"
-brew "elastic/tap/elasticsearch-full"
 brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli"
 
 cask "1password"
