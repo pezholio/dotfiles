@@ -1,6 +1,3 @@
 [submodule "gitprompt"]
 	path = gitprompt
 	url = git@github.com:pezholio/gitprompt.git
-[submodule "dalmatian-tools"]
-	path = dalmatian-tools
-	url = git@github.com:dxw/dalmatian-tools.git

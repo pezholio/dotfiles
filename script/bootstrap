@@ -1,30 +1,43 @@
 #!/bin/bash
+set -euo pipefail
 
-echo "Installing ohmyzsh.."
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [[ -z "${ZSH+x}" ]]; then
+  echo "Installing ohmyzsh.."
+  curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
 
-echo "Installing Homebrew..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 echo "Installing Homebrew dependencies from Brewfile..."
-brew bundle install --verbose --no-lock
-
-echo "Installing Rbenv default gems..."
-mkdir -p "$(rbenv root)/plugins"
-git clone https://github.com/rbenv/rbenv-default-gems.git "$(rbenv root)/plugins/rbenv-default-gems"
-
-ln -s -f "$HOME/.dotfiles/ruby/irbrc" ~/.irbrc
-ln -s -f "$HOME/.dotfiles/ruby/default-gems" "$(rbenv root)/default-gems"
+brew bundle install --verbose --quiet
 
 echo "Hiding desktop icons..."
 defaults write com.apple.finder CreateDesktop false
 killall Finder
 
+echo "Setting desktop images..."
+echo "Setting desktop images..."
+if desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"; then
+  desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
+else
+  desktoppr 0 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
+fi
+
 echo "Setting keymappings..."
-ln -s -f "$HOME/.dotfiles/karabiner" "$HOME/.config"
+mkdir -p "$HOME/.config"
+ln -sfn "$HOME/.dotfiles/karabiner" "$HOME/.config/karabiner"
 
-echo "Installing Dalmatian tooks"
-git clone git@github.com:dxw/dalmatian-tools.git "$HOME/Documents/dalmatian-tools"
-(cd "$HOME/Documents/dalmatian-tools" || exit; brew bundle install)
+echo "Creating secrets file (if it doesn't exist)..."
+if [ ! -f "$HOME/.dotfiles/secrets.sh" ]; then
+  cat << EOF > "$HOME/.dotfiles/secrets.sh"
+# Add your secrets here, for example:
+# export GITHUB_TOKEN="your_github_token"
+EOF
+fi
 
-echo "source $HOME/.dotfiles/.zshrc" >> "$HOME/.zshrc"
+zshrc_source="source "$HOME/.dotfiles/.zshrc""
+grep -Fqx "$zshrc_source" "$HOME/.zshrc" ||
+  printf '%s\n' "$zshrc_source" >> "$HOME/.zshrc"
