@@ -26,8 +26,9 @@ else
 fi
 
 echo "Setting keymappings..."
-mkdir -p "$HOME/.config"
-ln -sfn "$HOME/.dotfiles/karabiner" "$HOME/.config/karabiner"
+mkdir -p ~/Library/LaunchAgents
+ln -sfn "$HOME/.dotfiles/keymapping/keymapping.plist" ~/Library/LaunchAgents/com.user.hidutilMediaKeys.plist
+launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.user.hidutilMediaKeys.plist
 
 echo "Creating secrets file (if it doesn't exist)..."
 if [ ! -f "$HOME/.dotfiles/secrets.sh" ]; then
