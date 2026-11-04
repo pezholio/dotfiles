@@ -13,6 +13,10 @@ echo "Hiding desktop icons..."
 defaults write com.apple.finder CreateDesktop false
 killall Finder
 
+echo "Setting desktop images..."
+desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
+desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
+
 echo "Setting keymappings..."
 ln -s -f "$HOME/.dotfiles/karabiner" "$HOME/.config"
 
