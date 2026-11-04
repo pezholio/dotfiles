@@ -14,7 +14,7 @@ brew "aom"
 brew "automake"
 brew "awscli"
 brew "glib"
-brew "python@3.9"
+brew "python@3.15"
 brew "coreutils"
 brew "docker", link: false
 brew "libtool"
