@@ -14,21 +14,8 @@ fi
 echo "Installing Homebrew dependencies from Brewfile..."
 brew bundle install --verbose --quiet
 
-echo "Hiding desktop icons..."
-defaults write com.apple.finder CreateDesktop false
-killall Finder
-
-echo "Setting desktop images..."
-if desktoppr 1 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"; then
-  desktoppr 0 "$HOME/.dotfiles/wallpaper/benny.jpg"
-else
-  desktoppr 0 "$HOME/.dotfiles/wallpaper/jazzcats.jpg"
-fi
-
-echo "Setting keymappings..."
-mkdir -p ~/Library/LaunchAgents
-ln -sfn "$HOME/.dotfiles/keymapping/keymapping.plist" ~/Library/LaunchAgents/com.user.hidutilMediaKeys.plist
-launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.user.hidutilMediaKeys.plist
+echo "Setting MacOS defaults..."
+/bin/bash -c "$("$HOME/.dotfiles/macos/set-defaults.sh")"
 
 echo "Creating secrets file (if it doesn't exist)..."
 if [ ! -f "$HOME/.dotfiles/secrets.sh" ]; then

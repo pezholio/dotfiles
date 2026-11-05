@@ -7,7 +7,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/zsh</string>
-        <string>/Users/stuartharrison/.dotfiles/keymapping/set-keymappings.sh</string>
+        <string>/Users/stuartharrison/.dotfiles/macos/set-keymappings.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
