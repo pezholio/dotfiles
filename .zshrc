@@ -26,6 +26,8 @@
 . "$HOME/.dotfiles/sdkman/sdkman.sh"
 # Add brew function to update Brewfile and create PR
 . "$HOME/.dotfiles/brew/alias.sh"
+# Activate mise for polyglot runtime management
+. "$HOME/.dotfiles/mise/activate.sh"
 
 function sync_dotfiles_main() {
   (
