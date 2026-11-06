@@ -24,7 +24,8 @@ well as a setting the wallpaper programmatically on macOS (via [desktoppr](https
 
 The setup script will install Homebrew if it is not already installed, and then use the Brewfile to install all the 
 necessary packages and applications. Additionally, it will also add anything installed via Homebrew to the Brewfile and
-push the changes to this repository, so that the Brewfile is always up to date!
+create a branch and pull request with the changes using GitHub CLI. The `brew` function prompts you to open the pull
+request for review.
 
 ## Setup
 
