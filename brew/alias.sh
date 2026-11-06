@@ -32,7 +32,7 @@ function brew() {
         git add -- Brewfile
         git commit -m "Update Brewfile after $action $*" -- Brewfile
         git push --set-upstream origin "$branch"
-        pr_url=$(gh pr create --title "$title" --body "Updates Brewfile after running brew $*.")
+        pr_url=$(gh pr create --title "$title" --body "Updates Brewfile after running \`brew $*\`.")
 
         printf 'Created pull request: %s\n' "$pr_url"
         if [[ -t 0 ]]; then
