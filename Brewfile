@@ -45,6 +45,8 @@ brew "libheif"
 brew "libtool"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# GitHub command-line tool
+brew "gh"
 # GIF image/animation creator/editor
 brew "gifsicle"
 # Distributed revision control system
