@@ -145,6 +145,8 @@ brew "tfenv"
 brew "tilt"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Syntax-aware linter for prose
 brew "vale"
 # Library to create, extract, and modify Windows Imaging files
