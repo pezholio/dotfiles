@@ -2,7 +2,6 @@ tap "cloudfoundry/tap"
 tap "elastic/tap"
 tap "heroku/brew"
 tap "ministryofjustice/cloud-platform-tap"
-tap "sdkman/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # CLI tool for working with Architecture Decision Records
@@ -53,8 +52,6 @@ brew "gifsicle"
 brew "git"
 # Automatic git commit --fixup
 brew "git-absorb"
-# Go version management
-brew "goenv"
 # Image manipulation
 brew "netpbm"
 # Framework for layout and rendering of i18n text
@@ -95,14 +92,14 @@ brew "libraw"
 brew "libxmlsec1"
 # Fast and user friendly build system
 brew "meson"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # HTTP/2 C Library
 brew "nghttp2"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Install NodeJS versions
 brew "node-build"
-# Node.js version manager
-brew "nodenv"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
 # PNG file optimizer
@@ -119,12 +116,10 @@ brew "postgresql@17"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
 # Persistent key-value database, with built-in net interface
 brew "redis"
+# Install various Ruby versions and implementations
+brew "ruby-build"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Tool to create intelligent and beautiful documentation
@@ -153,8 +148,6 @@ brew "yarn"
 brew "yq"
 # Multi-purpose CLI for Ministry of Justice Cloud Platform.
 brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli", trusted: true
-# SDKMAN! the Software Development Kit Manager
-brew "sdkman/tap/sdkman-cli"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Command-line tool to set the desktop picture
