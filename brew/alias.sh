@@ -13,6 +13,11 @@ function brew() {
         cd "$dotfiles_dir"
         command brew bundle dump --force
 
+        if [[ -n "${BREW_SKIP_GIT+x}" ]]; then
+          printf 'BREW_SKIP_GIT is set; skipping git and pull request actions.\n'
+          exit 0
+        fi
+
         local diff_status
         if git diff --quiet HEAD -- Brewfile; then
           printf 'Brewfile is unchanged; no pull request needed.\n'
