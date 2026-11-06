@@ -95,6 +95,8 @@ brew "libraw"
 brew "libxmlsec1"
 # Fast and user friendly build system
 brew "meson"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # HTTP/2 C Library
 brew "nghttp2"
 # Open-source, cross-platform JavaScript runtime environment
