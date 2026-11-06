@@ -24,3 +24,5 @@
 . "$HOME/.dotfiles/aliases.sh"
 # Sdkman initialization stuff (Java, Groovy, Scala, Kotlin, etc)
 . "$HOME/.dotfiles/sdkman/sdkman.sh"
+# Add brew function to update Brewfile and create PR
+. "$HOME/.dotfiles/brew/alias.sh"
