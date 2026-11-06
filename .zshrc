@@ -6,14 +6,8 @@
 . "$HOME/.dotfiles/utils.sh"
 # Ruby and rbenv stuff
 . "$HOME/.dotfiles/ruby/aliases.sh"
-. "$HOME/.dotfiles/ruby/rbenv.sh"
 # Python Stuff
-. "$HOME/.dotfiles/python/pyenv.sh"
 . "$HOME/.dotfiles/python/poetry.sh"
-# Nodenv Stuff
-. "$HOME/.dotfiles/node/nodenv.sh"
-# Goenv Stuff
-. "$HOME/.dotfiles/go/goenv.sh"
 # Docker things
 . "$HOME/.dotfiles/docker/aliases.sh"
 # Add QT to path
@@ -22,8 +16,6 @@
 . "$HOME/.dotfiles/secrets.sh"
 # Some useful aliases
 . "$HOME/.dotfiles/aliases.sh"
-# Sdkman initialization stuff (Java, Groovy, Scala, Kotlin, etc)
-. "$HOME/.dotfiles/sdkman/sdkman.sh"
 # Add brew function to update Brewfile and create PR
 . "$HOME/.dotfiles/brew/alias.sh"
 # Activate mise for polyglot runtime management
