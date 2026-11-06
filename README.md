@@ -27,6 +27,9 @@ necessary packages and applications. Additionally, it will also add anything ins
 create a branch and pull request with the changes using GitHub CLI. The `brew` function prompts you to open the pull
 request for review.
 
+When a new shell starts, the dotfiles repository switches to `master` and fast-forwards it from `origin`. This is
+skipped with a warning if the worktree has uncommitted changes.
+
 ## Setup
 
 I decided not to use a framework for now, so setting up is as simple as cloning

@@ -26,3 +26,26 @@
 . "$HOME/.dotfiles/sdkman/sdkman.sh"
 # Add brew function to update Brewfile and create PR
 . "$HOME/.dotfiles/brew/alias.sh"
+
+function sync_dotfiles_master() {
+  (
+    cd "$HOME/.dotfiles" || exit 1
+
+    local changes
+    changes=$(git status --porcelain) || exit 1
+    if [[ -n "$changes" ]]; then
+      printf 'Skipping dotfiles update: the worktree has uncommitted changes.\n' >&2
+      exit 0
+    fi
+
+    git fetch --quiet origin master || exit 1
+    if git show-ref --verify --quiet refs/heads/master; then
+      git switch master || exit 1
+    else
+      git switch --track -c master origin/master || exit 1
+    fi
+    git pull --ff-only --quiet origin master
+  ) || printf 'Could not switch to or update dotfiles master.\n' >&2
+}
+
+sync_dotfiles_master
