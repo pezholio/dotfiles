@@ -79,8 +79,6 @@ brew "jpegoptim"
 brew "jq"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
 # Kubernetes command-line interface
 brew "kubernetes-cli", link: false
 # Image processing and image analysis library
@@ -107,8 +105,6 @@ brew "node-build"
 brew "nodenv"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
-# Open source distributed and RESTful search engine
-brew "opensearch"
 # PNG file optimizer
 brew "optipng"
 # Draw UML diagrams
