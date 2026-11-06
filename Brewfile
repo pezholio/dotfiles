@@ -105,8 +105,6 @@ brew "node-build"
 brew "nodenv"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
-# Open source distributed and RESTful search engine
-brew "opensearch"
 # PNG file optimizer
 brew "optipng"
 # Draw UML diagrams
