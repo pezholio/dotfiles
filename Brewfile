@@ -155,8 +155,6 @@ brew "yq"
 brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli", trusted: true
 # SDKMAN! the Software Development Kit Manager
 brew "sdkman/tap/sdkman-cli"
-# Multi-track audio editor and recorder
-cask "audacity"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Command-line tool to set the desktop picture
