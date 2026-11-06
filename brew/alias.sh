@@ -36,7 +36,8 @@ function brew() {
 
         printf 'Created pull request: %s\n' "$pr_url"
         if [[ -t 0 ]]; then
-          read -r -p "Open the PR now to review it? [y/N] " answer || answer=""
+          printf 'Open the PR now to review it? [y/N] ' >&2
+          IFS= read -r answer || answer=""
           case "$answer" in
             [Yy]*) gh pr view "$pr_url" --web ;;
           esac
