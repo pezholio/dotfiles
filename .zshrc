@@ -20,6 +20,8 @@
 . "$HOME/.dotfiles/brew/alias.sh"
 # Activate mise for polyglot runtime management
 . "$HOME/.dotfiles/mise/activate.sh"
+# Add mise function to create a PR for settings changes
+. "$HOME/.dotfiles/mise/alias.sh"
 
 function sync_dotfiles_main() {
   (
