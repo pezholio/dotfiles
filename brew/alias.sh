@@ -50,7 +50,7 @@ function brew() {
           printf 'Please review the PR: %s\n' "$pr_url"
         fi
 
-        git switch master
+        git switch main
       )
       ;;
   esac

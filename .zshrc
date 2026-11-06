@@ -27,7 +27,7 @@
 # Add brew function to update Brewfile and create PR
 . "$HOME/.dotfiles/brew/alias.sh"
 
-function sync_dotfiles_master() {
+function sync_dotfiles_main() {
   (
     cd "$HOME/.dotfiles" || exit 1
 
@@ -38,14 +38,14 @@ function sync_dotfiles_master() {
       exit 0
     fi
 
-    git fetch --quiet origin master || exit 1
-    if git show-ref --verify --quiet refs/heads/master; then
-      git switch master || exit 1
+    git fetch --quiet origin main || exit 1
+    if git show-ref --verify --quiet refs/heads/main; then
+      git switch main || exit 1
     else
-      git switch --track -c master origin/master || exit 1
+      git switch --track -c main origin/main || exit 1
     fi
-    git pull --ff-only --quiet origin master
-  ) || printf 'Could not switch to or update dotfiles master.\n' >&2
+    git pull --ff-only --quiet origin main
+  ) || printf 'Could not switch to or update dotfiles main.\n' >&2
 }
 
-sync_dotfiles_master
+sync_dotfiles_main
