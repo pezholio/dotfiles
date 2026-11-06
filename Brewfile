@@ -139,8 +139,6 @@ brew "svgo"
 brew "tesseract"
 # Terraform version manager inspired by rbenv
 brew "tfenv"
-# Define your dev environment as code. For microservice apps on Kubernetes
-brew "tilt"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # Extremely fast Python package installer and resolver, written in Rust
