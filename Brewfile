@@ -2,6 +2,7 @@ tap "cloudfoundry/tap"
 tap "elastic/tap"
 tap "heroku/brew"
 tap "ministryofjustice/cloud-platform-tap"
+tap "sdkman/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # CLI tool for working with Architecture Decision Records
@@ -148,6 +149,8 @@ brew "yarn"
 brew "yq"
 # Multi-purpose CLI for Ministry of Justice Cloud Platform.
 brew "ministryofjustice/cloud-platform-tap/cloud-platform-cli", trusted: true
+# Terminal interface for Antigravity agents
+cask "antigravity-cli"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Command-line tool to set the desktop picture
