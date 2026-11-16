@@ -23,6 +23,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -
 # Use F1-F12 keys as standard function keys
 defaults write -g com.apple.keyboard.fnState -bool true
 
+# Enable tap to click for the trackpad
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
 # Swap the Command and Option keys for my external keyboard (currently a Filco Majestouch 2)
 KEY='com.apple.keyboard.modifiermapping.12029-30738-0'
 OPTION='30064771298'
