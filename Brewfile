@@ -161,6 +161,8 @@ cask "docker-desktop"
 cask "ghostty"
 # Tools to protect your emails and files
 cask "gpg-suite"
+# Java IDE by JetBrains
+cask "intellij-idea"
 # Keyboard customiser
 cask "karabiner-elements"
 # Reverse proxy, secure introspectable tunnels to localhost
